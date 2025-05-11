@@ -63,9 +63,15 @@ const { title = "IslaConta® – Plantilla contable gratuita para autónomos en 
       <slot />
     </main>
 
-    <footer class="text-center text-sm text-gray-500 py-8">
-      © 2025 IslaConta®. Todos los derechos reservados.
-    </footer>
+    <footer class="text-center text-sm text-gray-500 py-8 space-y-2">
+  <p>© 2025 IslaConta®. Todos los derechos reservados.</p>
+  <div class="flex justify-center gap-4 text-blue-600">
+    <a href="/politica-privacidad" class="hover:underline">Política de Privacidad</a>
+    <a href="/aviso-legal" class="hover:underline">Aviso Legal</a>
+    <a href="/politica-cookies" class="hover:underline">Cookies</a>
+  </div>
+</footer>
+
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer onload="AOS && AOS.init({ duration: 800, once: true })"></script>
