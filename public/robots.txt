@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://islaconta.vercel.app/sitemap.xml
+Sitemap: https://islaconta.es/sitemap.xml

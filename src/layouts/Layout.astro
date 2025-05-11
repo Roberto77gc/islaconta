@@ -21,28 +21,45 @@ const { title = "IslaConta® – Plantilla contable gratuita para autónomos en 
     <meta name="author" content="IslaConta®" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph (Facebook, WhatsApp, etc.) -->
+    <!-- Open Graph -->
     <meta property="og:title" content="IslaConta® – Simplifica tu contabilidad en Canarias" />
     <meta property="og:description" content="Plantilla gratuita y adaptada para autónomos y pymes canarias. Descarga inmediata." />
-    <meta property="og:image" content="/islaconta_og.png" />
+    <meta property="og:image" content="/islaconta-preview-2025.png" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tudominio.com" />
+    <meta property="og:url" content="https://islaconta.es" />
 
-    <!-- Twitter -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="IslaConta® – Plantilla contable para Canarias" />
+    <meta name="twitter:description" content="Descarga gratis la plantilla contable 2025 para autónomos y pymes canarias. Optimiza tu fiscalidad fácilmente." />
+    <meta name="twitter:image" content="/islaconta-preview-2025.png" />
+
+    <link rel="canonical" href="https://islaconta.es" />
 
     <title>{title}</title>
   </head>
 
   <body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
     <header class="bg-white shadow p-4 flex items-center justify-between">
-      <h1 class="text-xl font-bold text-blue-700">IslaConta®</h1>
-      <a href="#cta" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+      <h1 class="text-xl font-bold text-blue-700">
+        <a href="/" aria-label="Volver al inicio IslaConta">IslaConta®</a>
+      </h1>
+      <a href="#cta" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition" aria-label="Descargar plantilla IslaConta">
         Descargar ahora
       </a>
     </header>
 
     <main class="max-w-3xl mx-auto px-4 py-12">
+      <!-- Aquí puedes añadir tus imágenes con alt + lazy load -->
+      <!-- Ejemplo: -->
+      <!-- 
+      <img 
+        src="/islaconta-preview-2025.png" 
+        alt="Vista previa de la plantilla IslaConta 2025 para Canarias" 
+        loading="lazy" 
+        class="rounded shadow"
+      /> 
+      -->
       <slot />
     </main>
 
@@ -50,16 +67,13 @@ const { title = "IslaConta® – Plantilla contable gratuita para autónomos en 
       © 2025 IslaConta®. Todos los derechos reservados.
     </footer>
 
-    <!-- AOS Animations JS -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer onload="AOS && AOS.init({ duration: 800, once: true })"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer onload="AOS && AOS.init({ duration: 800, once: true })"></script>
 
     <script>
       window.addEventListener("load", () => {
         if (window.AOS) {
-          AOS.init({
-            duration: 800,
-            once: true
-          });
+          AOS.init({ duration: 800, once: true });
         } else {
           console.warn("AOS no se ha cargado correctamente.");
         }
@@ -67,4 +81,5 @@ const { title = "IslaConta® – Plantilla contable gratuita para autónomos en 
     </script>
   </body>
 </html>
+
 

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ImageCard from '../components/ImageCard.astro';
 ---
 
 <Layout title="IslaConta® – Simplifica tu contabilidad">
@@ -33,12 +34,13 @@ import Layout from '../layouts/Layout.astro';
       </a>
     </div>
 
-    <img
-      src="/icon_islaconta.png"
-      alt="Vista previa plantilla IslaConta"
-      class="mx-auto mt-10 rounded-xl shadow-xl w-full max-w-xs sm:max-w-md md:max-w-lg"
-      data-aos="zoom-in"
-    />
+    <div class="mt-10">
+      <ImageCard 
+        src="/islaconta-preview-2025.png"
+        alt="Vista previa de la plantilla contable IslaConta® 2025"
+        caption="Plantilla adaptada a la realidad fiscal canaria"
+      />
+    </div>
   </section>
 
   <!-- Beneficios -->

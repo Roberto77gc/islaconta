@@ -1,0 +1,19 @@
+---
+// Props que recibe el componente
+const { src, alt, caption = "", width = "100%", className = "" } = Astro.props;
+---
+
+<figure class={`rounded-xl overflow-hidden shadow-md ${className}`}>
+  <img 
+    src={src} 
+    alt={alt} 
+    loading="lazy" 
+    width={width} 
+    class="w-full h-auto"
+  />
+  {caption && (
+    <figcaption class="text-sm text-center text-gray-600 mt-2 px-2">
+      {caption}
+    </figcaption>
+  )}
+</figure>
