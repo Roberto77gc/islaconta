@@ -1,22 +1,70 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+---
+import "../styles/global.css";
+const { title = "IslaConta® – Plantilla contable gratuita para autónomos en Canarias" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- AOS Animations CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- SEO Básico -->
+    <meta name="description" content="IslaConta® 2025 es la plantilla contable inteligente para autónomos y pymes de Canarias. Descárgala gratis y simplifica tu gestión fiscal." />
+    <meta name="keywords" content="contabilidad canarias, plantilla autónomos, excel gratis pymes, fiscalidad canaria, isla conta" />
+    <meta name="author" content="IslaConta®" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (Facebook, WhatsApp, etc.) -->
+    <meta property="og:title" content="IslaConta® – Simplifica tu contabilidad en Canarias" />
+    <meta property="og:description" content="Plantilla gratuita y adaptada para autónomos y pymes canarias. Descarga inmediata." />
+    <meta property="og:image" content="/islaconta_og.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tudominio.com" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>{title}</title>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
+    <header class="bg-white shadow p-4 flex items-center justify-between">
+      <h1 class="text-xl font-bold text-blue-700">IslaConta®</h1>
+      <a href="#cta" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+        Descargar ahora
+      </a>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 py-12">
+      <slot />
+    </main>
+
+    <footer class="text-center text-sm text-gray-500 py-8">
+      © 2025 IslaConta®. Todos los derechos reservados.
+    </footer>
+
+    <!-- AOS Animations JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer onload="AOS && AOS.init({ duration: 800, once: true })"></script>
+
+    <script>
+      window.addEventListener("load", () => {
+        if (window.AOS) {
+          AOS.init({
+            duration: 800,
+            once: true
+          });
+        } else {
+          console.warn("AOS no se ha cargado correctamente.");
+        }
+      });
+    </script>
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
