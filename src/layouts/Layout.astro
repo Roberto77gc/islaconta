@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-const { title = "IslaConta® – Plantilla contable gratuita para autónomos en Canarias" } = Astro.props;
+const { title = "Guía para Autónomos en Canarias 2025 – IslaConta®" } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -15,14 +15,14 @@ const { title = "IslaConta® – Plantilla contable gratuita para autónomos en 
     <!-- AOS Animations CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-    <!-- SEO Básico -->
-    <meta name="description" content="IslaConta® 2025 es la plantilla contable inteligente para autónomos y pymes de Canarias. Descárgala gratis y simplifica tu gestión fiscal." />
-    <meta name="keywords" content="contabilidad canarias, plantilla autónomos, excel gratis pymes, fiscalidad canaria, isla conta" />
+    <!-- SEO Optimizado -->
+    <meta name="description" content="Accede a la guía 2025 para autónomos en Canarias. Fiscalidad, contabilidad y plantilla gratuita en Excel adaptada a la realidad insular." />
+    <meta name="keywords" content="guía autónomos canarias 2025, plantilla fiscal canarias, excel contabilidad autónomos, fiscalidad insular, isla conta" />
     <meta name="author" content="IslaConta®" />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="IslaConta® – Simplifica tu contabilidad en Canarias" />
+    <meta property="og:title" content="Guía para Autónomos en Canarias 2025 – IslaConta®" />
     <meta property="og:description" content="Plantilla gratuita y adaptada para autónomos y pymes canarias. Descarga inmediata." />
     <meta property="og:image" content="/islaconta-preview-2025.png" />
     <meta property="og:type" content="website" />
@@ -30,24 +30,22 @@ const { title = "IslaConta® – Plantilla contable gratuita para autónomos en 
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="IslaConta® – Plantilla contable para Canarias" />
+    <meta name="twitter:title" content="Guía para Autónomos en Canarias 2025 – IslaConta®" />
     <meta name="twitter:description" content="Descarga gratis la plantilla contable 2025 para autónomos y pymes canarias. Optimiza tu fiscalidad fácilmente." />
     <meta name="twitter:image" content="/islaconta-preview-2025.png" />
 
     <link rel="canonical" href="https://islaconta.es" />
 
     <title>{title}</title>
+
     <!-- Google Analytics -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V702HR0M2M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-V702HR0M2M');
-</script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V702HR0M2M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-V702HR0M2M');
+    </script>
   </head>
 
   <body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
@@ -61,32 +59,40 @@ const { title = "IslaConta® – Plantilla contable gratuita para autónomos en 
     </header>
 
     <main class="max-w-3xl mx-auto px-4 py-12">
-      <!-- Aquí puedes añadir tus imágenes con alt + lazy load -->
-      <!-- Ejemplo: -->
-      <!-- 
+      <!-- H1 SEO -->
+      <h1 class="text-2xl font-bold mb-4">
+        Guía para Autónomos en Canarias 2025: Plantilla y Fiscalidad Simplificada
+      </h1>
+
+      <!-- Imagen optimizada -->
       <img 
         src="/islaconta-preview-2025.png" 
-        alt="Vista previa de la plantilla IslaConta 2025 para Canarias" 
+        alt="Guía fiscal 2025 para autónomos en Canarias con plantilla gratuita IslaConta" 
         loading="lazy" 
-        class="rounded shadow"
-      /> 
-      -->
+        class="rounded shadow mb-6"
+      />
+
+      <!-- Enlace interno con frase clave -->
+      <p class="mb-6">
+        <a href="/" class="underline text-blue-600 hover:text-blue-800">
+          Ver la guía 2025 para autónomos en Canarias
+        </a>
+      </p>
+
       <slot />
     </main>
 
     <footer class="text-center text-sm text-gray-500 py-8 space-y-2">
-  <p>© 2025 IslaConta®. Todos los derechos reservados.</p>
-  <div class="flex justify-center gap-4 text-blue-600">
-    <a href="/politica-privacidad" class="hover:underline">Política de Privacidad</a>
-    <a href="/aviso-legal" class="hover:underline">Aviso Legal</a>
-    <a href="/politica-cookies" class="hover:underline">Cookies</a>
-  </div>
-</footer>
-
+      <p>© 2025 IslaConta®. Todos los derechos reservados.</p>
+      <div class="flex justify-center gap-4 text-blue-600">
+        <a href="/politica-privacidad" class="hover:underline">Política de Privacidad</a>
+        <a href="/aviso-legal" class="hover:underline">Aviso Legal</a>
+        <a href="/politica-cookies" class="hover:underline">Cookies</a>
+      </div>
+    </footer>
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer onload="AOS && AOS.init({ duration: 800, once: true })"></script>
-
     <script>
       window.addEventListener("load", () => {
         if (window.AOS) {
@@ -98,5 +104,4 @@ const { title = "IslaConta® – Plantilla contable gratuita para autónomos en 
     </script>
   </body>
 </html>
-
 
